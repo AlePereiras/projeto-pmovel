@@ -28,20 +28,17 @@ const MyApp = () => {
 
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  <Gato nome = "Jubileia"></Gato>
-  <Gato nome = "Gato 2"></Gato>
-  <Gato nome = "Gato 3"></Gato>
+  <Gato nome = "Jubileia" idade = {7}></Gato>
+  <Gato nome = "Gato 2" idade = {3}></Gato>
+  <Gato nome = "Gato 3" idade = {9}></Gato>
   
   </>
   
   )
 }
 
-const Gato = (props) => {
-  return (
-  
-  <Text>Eu sou uma gata e meu nome é {props.nome.toUpperCase()}. </Text>
-  )
+const Gato = ({nome, idade}) => {
+  return <Text>Eu sou uma gata e meu nome é {nome.toUpperCase()} e eu tenho {idade} anos. </Text> 
 }
 
 export default MyApp;

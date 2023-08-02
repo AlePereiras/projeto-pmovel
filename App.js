@@ -28,17 +28,19 @@ const MyApp = () => {
 
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  <Gato></Gato>
-  <Gato></Gato>
+  <Gato nome = "Jubileia"></Gato>
+  <Gato nome = "Gato 2"></Gato>
+  <Gato nome = "Gato 3"></Gato>
+  
   </>
   
   )
 }
 
-const Gato = () => {
+const Gato = (props) => {
   return (
   
-  <Text>Eu sou o Douglas!</Text>
+  <Text>Eu sou uma gata e meu nome é {props.nome.toUpperCase()}. </Text>
   )
 }
 

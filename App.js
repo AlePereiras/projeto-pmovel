@@ -28,7 +28,7 @@ const MyApp = () => {
 
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  <Gato nome = "Jubileia" idade = {7}></Gato>
+  <Gato nome = "Jubileia" idade = {1}></Gato>
   <Gato nome = "Gato 2" idade = {3}></Gato>
   <Gato nome = "Gato 3" idade = {9}></Gato>
   
@@ -38,7 +38,13 @@ const MyApp = () => {
 }
 
 const Gato = ({nome, idade}) => {
-  return <Text>Eu sou uma gata e meu nome é {nome.toUpperCase()} e eu tenho {idade} anos. </Text> 
+
+  let text = "anos";
+  if(idade === 1){
+    text = "ano"
+  }
+
+  return <Text>Eu sou uma gata e meu nome é {nome.toUpperCase()} e eu tenho {idade} {text}. </Text> 
 }
 
 export default MyApp;

@@ -19,13 +19,18 @@
   //},
 //});
 
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 const myApp = () => {
-  return ( <View>
+  return ( 
+
+  <>
+
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  </View>
+  
+  </>
+  
   )
 }
 

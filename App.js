@@ -21,12 +21,11 @@
 
 import { Text } from "react-native";
 
-
-export default function myApp(){
+const myApp = () => {
   return <Text>ABC</Text>
 }
 
-// export default myApp;
+export default myApp;
 
 
 

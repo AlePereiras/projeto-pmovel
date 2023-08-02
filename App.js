@@ -21,20 +21,28 @@
 
 import { Text } from "react-native";
 
-const myApp = () => {
+const MyApp = () => {
   return ( 
 
   <>
 
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  
+  <Gato></Gato>
+  <Gato></Gato>
   </>
   
   )
 }
 
-export default myApp;
+const Gato = () => {
+  return (
+  
+  <Text>Eu sou o Douglas!</Text>
+  )
+}
+
+export default MyApp;
 
 
 

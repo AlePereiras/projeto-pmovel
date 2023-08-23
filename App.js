@@ -19,7 +19,8 @@
   //},
 //});
 
-import { Text } from "react-native";
+import { Text, TextInput } from "react-native";
+import { useState } from "react";
 
 const MyApp = () => {
   return ( 
@@ -28,23 +29,45 @@ const MyApp = () => {
 
   <Text>Hello Word</Text> 
   <Text>IFAL</Text>
-  <Gato nome = "Jubileia" idade = {1}></Gato>
-  <Gato nome = "Gato 2" idade = {3}></Gato>
-  <Gato nome = "Gato 3" idade = {9}></Gato>
+  <Gato idade = {1}></Gato>
+  <Gato idade = {3}></Gato>
+  <Gato idade = {9}></Gato>
   
   </>
   
   )
 }
 
-const Gato = ({nome, idade}) => {
+const Gato = ({idade}) => {
+  const [nome, setNome] = useState('');
+  const [cor, setCor] = useState('');
 
   let text = "anos";
   if(idade === 1){
     text = "ano"
   }
 
-  return <Text>Eu sou uma gata e meu nome é {nome.toUpperCase()} e eu tenho {idade} {text}. </Text> 
+  return (
+ 
+<>
+    <TextInput
+      onChangeText={(texto) => setNome(texto)}
+      defaultValue={nome}
+      placeholder="Informe o nome do gato..."
+      style={{borderWidth: 3, height: 40, borderColor:'#00FA9A'}}
+    />
+
+    <TextInput
+    onChangeText={(olhos) => setCor(olhos)}
+    defaultValue={cor}
+    placeholder="Informe a cor dos olhos do gato..."
+    style={{borderWidth: 3, height: 40, borderColor:'#CD5C5C'}}
+    />
+
+  <Text>Eu sou uma gata e meu nome é {nome.toUpperCase()} e eu tenho {idade} {text} e a cor dos meus olhos é {cor.toUpperCase()}. </Text> 
+  
+</>
+  );
 }
 
 export default MyApp;

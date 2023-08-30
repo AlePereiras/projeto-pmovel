@@ -9,7 +9,7 @@ const Flex = () => {
                 flexDirection: 'column',
             },
         ]}>
-            <View style={{flex: 1, backgroundColor: 'green'}}/>
+            <View style={{flex: 1.5, backgroundColor: 'green'}}/>
             <View style={{flex: 7, backgroundColor: 'write'}}/>
     </View>
     );
@@ -18,7 +18,7 @@ const Flex = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
+        padding: 3,
     },
 });
 

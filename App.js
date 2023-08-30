@@ -21,7 +21,8 @@
 
 import { Text, TextInput } from "react-native";
 import { useState } from "react";
-import telaLogin from "./telaLogin"
+import telaLogin from "./telaLogin";
+import telaWhatsapp from "./telaWhatsapp";
 
 const MyApp = () => {
   return ( 
@@ -72,6 +73,6 @@ const Gato = ({idade}) => {
 }
 
 //export default MyApp;
-export default telaLogin;
+export default telaWhatsapp;
 
 

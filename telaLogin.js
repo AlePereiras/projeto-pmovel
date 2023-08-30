@@ -1,10 +1,11 @@
-import { Text, TextInput } from "react-native";
-import { useState } from "react";
+import { Text, TextInput, Button, View, StyleSheet} from "react-native";
+import React, { useState } from "react";
 
  const input = () => {
     const [input1, setInput1] = useState('');
     const [input2, setInput2] = useState('');
-    
+    const [cliques, setCliques] = useState(0);
+
     return(
         <>
         <Text style={{
@@ -44,6 +45,13 @@ import { useState } from "react";
                 borderColor:'#CD5C5C',
             }}
         />
+
+            <Button title = "LOGIN" onPress={() => {
+                setCliques();
+            }}
+        />
+
+
 
         </>
     );

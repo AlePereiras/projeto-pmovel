@@ -1,35 +1,48 @@
 import React from "react";
-import {Text, View, StyleSheet,} from "react-native";
-import { Avatar } from "react-native-paper";
+import { Text, View, StyleSheet } from "react-native";
+import { Avatar, Badge, } from "react-native-paper";
 
 const Flex = () => {
-    return(
+    return (
         <View
-        style={[
-            styles.container,{
-                flexDirection: 'column',
-            },
-        ]}>
-            <View style={{flex: 1.5, backgroundColor: '#008B8B'}}>
-            <Text>WhatsApp</Text>
-            
+            style={[
+                styles.container,
+                {
+                    flexDirection: "column",
+                    backgroundColor: '#000'
+                },
+            ]}
+        >
+            <View style={{ flex: 1.5, backgroundColor: "#008B8B" }}>
+                <Text>WhatsApp</Text>
             </View>
-            
-            
-            <View style={{flex: 7, backgroundColor: '#fff', flexDirection: 'row',}}>
-                <Avatar.Image size={65} style={styles.avatar} source={require('../projeto-pmovel/img/emoji.png')}/>
-                <View style={{backgroundColor: '#fff', flexDirection: 'column', left: 13,}}>
-                <Text style={styles.text1}>Fim de Semana</Text>
-                <Text style={styles.text2}>Sofia: Figurinha</Text>
+
+            <View style={{ flex: 7, backgroundColor: "#fff", flexDirection: "row" }}>
+              
+                <View style={{ flexDirection: "column" }}>
+                    <Avatar.Image size={65} style={styles.avatar} source={require("../projeto-pmovel/img/emoji.png")} />
                 </View>
+                        
+                <View style={{ flexDirection: "column", marginLeft: 10 }}>
+                    <Text style={styles.text1}>Fim de Semana</Text>
+                    <Text style={styles.text2}>Sofia: Figurinha</Text>
+                </View>
+                       
+                <View style={{ top: 24, left: 95, }}>
+                    <Text style={{ color: "green", left: 10, }}>09:49</Text>
+                    <Badge style={{ backgroundColor: "green", }}>2</Badge>
                 </View>
 
-                
-           
-    </View>
+            </View>
+
+            <View style={{ flexDirection: "column", }}>
+                <Avatar.Image size={65} source={require("../projeto-pmovel/img/emoji1.jpg")} />
+            </View>
+
+        </View>
     );
 };
-
+                     
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -40,16 +53,25 @@ const styles = StyleSheet.create({
         left: 15,
     },
     text1: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
         fontSize: 20,
-        left: 30,
         top: 15,
-        
+        left: 15,
     },
     text2: {
-        top: 50,
-        
-    }
+        color: "gray",
+        top: 15,
+        left: 15,
+    },
 });
 
-export default Flex;
+export default Flex;              
+                
+
+               
+           
+            
+
+      
+
+

@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { Avatar, Badge, } from "react-native-paper";
+import { Avatar, Badge, Divider, } from "react-native-paper";
+
 
 const Flex = () => {
     return (
@@ -13,8 +14,10 @@ const Flex = () => {
                 },
             ]}
         >
-            <View style={{ flex: 1.5, backgroundColor: "#008B8B" }}>
-                <Text>WhatsApp</Text>
+            <View style={{ flex: 1.5, backgroundColor: "#008B8B",}}>
+                <Text style={{ color: '#fff', fontWeight: "bold", top: 25, left: 15, fontSize: 20, }}>WhatsApp</Text>
+                <Text style={{ color: '#fff', top: 60, left: 50, fontSize: 20 }}>Conversas</Text>
+                <Badge style={{ backgroundColor: "#fff", color: "#000", }}>1</Badge>
             </View>
 
             <View style={{ flex: 7, backgroundColor: "#fff", flexDirection: "row" }}>
@@ -26,6 +29,8 @@ const Flex = () => {
                 <View style={{ flexDirection: "column", marginLeft: 10 }}>
                     <Text style={styles.text1}>Fim de Semana</Text>
                     <Text style={styles.text2}>Sofia: Figurinha</Text>
+                    <Divider style={{top: 31, left:15, width: 170,}}/>
+                    <Divider style={{ top: 30, width: 130, left: 184, }} />
                 </View>
                        
                 <View style={{ top: 24, left: 95, }}>
